@@ -1,0 +1,165 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/notebook_paper_wallpaper"
+    tools:context=".MainActivity" >
+
+    <Button
+        android:id="@+id/highscoreBtn"
+        style="@style/customBtnStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/playBtn"
+        android:layout_below="@+id/playBtn"
+        android:layout_marginTop="20dp"
+        android:onClick="highscoreClicked"
+        android:text="@string/highscore" />
+
+    <Button
+        android:id="@+id/childBtn"
+        style="@style/customBtnStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/highscoreBtn"
+        android:layout_marginLeft="14dp"
+        android:layout_toRightOf="@+id/highscoreBtn"
+        android:onClick="ChildGuessClicked"
+        android:text="@string/child_guess"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/appBtn"
+        style="@style/customBtnStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/highscoreBtn"
+        android:layout_alignBottom="@+id/highscoreBtn"
+        android:layout_alignLeft="@+id/childBtn"
+        android:layout_alignRight="@+id/childBtn"
+        android:onClick="AppGuessClicked"
+        android:text="@string/app_guess"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/freeBtn"
+        style="@style/customBtnStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/appBtn"
+        android:layout_alignRight="@+id/childBtn"
+        android:layout_below="@+id/appBtn"
+        android:layout_marginTop="19dp"
+        android:onClick="FreePlayClicked"
+        android:text="@string/free_play"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/welcomeTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/welcome_"
+        android:textAppearance="@style/AppBaseTheme"
+        android:textSize="26sp" />
+
+    <EditText
+        android:id="@+id/nameTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/welcomeTxt"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:hint="@string/enter_your_name"
+        android:inputType="text" >
+
+        <requestFocus />
+    </EditText>
+
+    <Spinner
+        android:id="@+id/cardTypeSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rangeTxt"
+        android:layout_alignTop="@+id/cardtypeTxt"
+        android:layout_toRightOf="@+id/cardtypeTxt" />
+
+    <Spinner
+        android:id="@+id/rangeSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/numberPresentLbl"
+        android:layout_alignTop="@+id/rangeTxt"
+        android:layout_toRightOf="@+id/rangeTxt" />
+
+    <TextView
+        android:id="@+id/numberPresentLbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rangeTxt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="19dp"
+        android:text="@string/_"
+        android:textSize="24sp"
+        android:visibility="invisible" />
+
+    <EditText
+        android:id="@+id/lowerBoundTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/numberPresentLbl"
+        android:layout_alignBottom="@+id/numberPresentLbl"
+        android:layout_alignLeft="@+id/rangeTxt"
+        android:layout_toLeftOf="@+id/numberPresentLbl"
+        android:ems="10"
+        android:hint="@string/_1_20"
+        android:visibility="invisible" />
+
+    <EditText
+        android:id="@+id/upperBoundTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/numberPresentLbl"
+        android:layout_toRightOf="@+id/numberPresentLbl"
+        android:ems="10"
+        android:hint="@string/max_100"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/cardtypeTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/rangeTxt"
+        android:layout_below="@+id/nameTxt"
+        android:layout_marginTop="22dp"
+        android:text="@string/card_type_"
+        android:textAppearance="@style/AppBaseTheme"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/rangeTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/playBtn"
+        android:layout_below="@+id/cardtypeTxt"
+        android:layout_marginTop="18dp"
+        android:text="@string/number_range_"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/playBtn"
+        style="@style/customBtnStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/upperBoundTxt"
+        android:layout_marginTop="14dp"
+        android:layout_toLeftOf="@+id/welcomeTxt"
+        android:onClick="PlayClicked"
+        android:text="@string/play" />
+
+</RelativeLayout>

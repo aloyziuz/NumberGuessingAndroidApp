@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="NewApi">
+        <ignore path="src/jcu/cp3307/brownscriterionnumberguessing/ChildGameActivity.java" />
+        <ignore path="src/jcu/cp3307/brownscriterionnumberguessing/FreeGameActivity.java" />
+        <ignore path="src/jcu/cp3307/brownscriterionnumberguessing/Game_Activity.java" />
+    </issue>
+</lint>

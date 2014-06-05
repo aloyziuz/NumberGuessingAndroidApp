@@ -1,0 +1,87 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/notebook_paper_wallpaper"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:id="@+id/welcomeTxt"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.62"
+        android:text="@string/can_you_find_your_number_here_"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/cardNumberLbl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.34"
+        android:gravity="center"
+        android:text="@string/card_1_out_of_10"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/numberPresentLbl"
+        android:layout_width="278dp"
+        android:layout_height="0dp"
+        android:layout_weight="0.71"
+        android:gravity="center"
+        android:text="@string/your_number_is_not_found_here_"
+        android:textColor="#ff0000"
+        android:textSize="16sp"
+        android:visibility="invisible" />
+
+    <GridView
+        android:id="@+id/GridView1"
+        android:layout_width="wrap_content"
+        android:layout_height="214dp"
+        android:layout_weight="1"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:longClickable="false"
+        android:background="@drawable/card"
+        android:paddingTop="15dp"
+        android:gravity="center"
+        android:verticalSpacing="2.5dp"
+        android:numColumns="5" >
+    </GridView>
+
+    <RelativeLayout
+        android:id="@+id/buttonsLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.11"
+        android:visibility="visible" >
+
+        <Button
+            android:id="@+id/noBtn"
+            style="@style/customBtnStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:onClick="PresentClicked"
+            android:text="@string/yes" />
+
+        <Button
+            android:id="@+id/yesBtn"
+            style="@style/customBtnStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:onClick="NotPresentClicked"
+            android:text="@string/no" />
+
+    </RelativeLayout>
+
+</LinearLayout>
